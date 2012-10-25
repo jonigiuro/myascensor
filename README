@@ -1,5 +1,7 @@
 My version of the Ascensor plugin. It works ie7 plus and builds the menu on top dinamically. It also resize to fit the screen, even on resize.
 Demo over at: http://zhereicome.com/experiments/statics/myascensor
+
+Co-coded with https://github.com/Oeg87
 --TO DO--
 REFACTOR JS!!!
 Add preloader
