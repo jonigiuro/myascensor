@@ -18,15 +18,10 @@ $(document).ready(function() {
             }
             cur = curP.find('.slide').first();
 
-            slTop = cur.position().top;
-            slLeft = cur.position().left;
-
         } else {
             cur = cur.next();
-            slTop = cur.position().top;
-            slLeft = cur.position().left;
         }
-        moveBox(slTop, slLeft);
+        moveBox(cur);
         setActiveBox(cur);
 
     });
@@ -37,20 +32,15 @@ $(document).ready(function() {
         if (cur.prev().length == 0) {
             curP = cur.parent().prev()
             if (curP.length == 0) {
-                curP = $('#p2');
-                cur = $('#p2 .slide').last();
+                curP = $('.project').last();
+                cur = curP.find('.slide').last();
             }
             cur = curP.find('.slide').last();
 
-            slTop = cur.position().top;
-            slLeft = cur.position().left;
-
         } else {
             cur = cur.prev();
-            slTop = cur.position().top;
-            slLeft = cur.position().left;
         }
-        moveBox(slTop, slLeft);
+        moveBox(cur);
         setActiveBox(cur);
 
     });
@@ -61,9 +51,7 @@ $(document).ready(function() {
             curP = $('.project').first();
         }
         cur = curP.find('.slide').first();
-        slTop = cur.position().top;
-        slLeft = cur.position().left;
-        moveBox(slTop, slLeft);
+        moveBox(cur);
         setActiveBox(cur);
     });
 
@@ -74,9 +62,7 @@ $(document).ready(function() {
             curP = $('.project').last();
         }
         cur = curP.find('.slide').first();
-        slTop = cur.position().top;
-        slLeft = cur.position().left;
-        moveBox(slTop, slLeft);
+        moveBox(cur);
         setActiveBox(cur);
     });
 
@@ -85,9 +71,7 @@ $(document).ready(function() {
         proj = $(this).attr('href');
         curP = $('#' + proj)
         cur = curP.find('.slide').first();
-        slTop = cur.position().top;
-        slLeft = cur.position().left;
-        moveBox(slTop, slLeft);
+        moveBox(cur);
         setActiveBox(cur);
     })
 
@@ -99,11 +83,17 @@ $(document).ready(function() {
         curP = $('#p' + projN);
         var allCur = curP.find(('.slide'));
         cur = $(allCur[parseInt(slideN) - 1]);
-        slTop = cur.position().top;
-        slLeft = cur.position().left;
-        moveBox(slTop, slLeft);
+        moveBox(cur);
+        setActiveBox(cur);
+    });
+
+    $('#link-to-3-3').click(function(e){
+        e.preventDefault();
+        cur = $('#p3-3');
+        moveBox(cur);
         setActiveBox(cur);
     })
+
 })
 //KEY NAV
 /////////////////////////////////////////////////////////////
@@ -129,10 +119,12 @@ $(document).keydown(function(e) {
 
 });//End doc ready
 
-function moveBox(toT, toL) {
+function moveBox(curElem) {
+    slTop = cur.position().top;
+    slLeft = cur.position().left;
     $('#container').animate({
-        'top' : -1 * toT,
-        'left' : -1 * toL
+        'top' : -1 * slTop,
+        'left' : -1 * slLeft
     }, 1000);
 }
 
