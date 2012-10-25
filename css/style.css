@@ -1,0 +1,112 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body, html{
+	height:100%;
+	width:100%;
+	font-family:'Helvetica','Arial','sans-serif';
+	overflow:hidden;
+}
+#navigation{
+	position:fixed;
+	bottom:0;
+	overflow:auto;
+}
+#window{
+	height:300px;
+	width:300px;
+	border:1px solid #000;
+	position:relative;
+	overflow:hidden;
+}
+#container{
+	width:10000px;
+	position:relative;
+  
+}
+.slide{
+    width:300px;
+    height:300px;
+    float:left;
+}
+#p1-1{
+    background-color:#bada55;
+}
+#p1-2{
+
+    background-color:red;
+}
+#p2-1{
+    background-color:orange;
+}
+#p2-2{
+    background-color:green;
+}
+#p2-3{
+    background-color:#e1e1e1;
+}
+#p3-1{
+	background-color:#FFBB55;
+}
+#p3-2{
+	background-color:#BAD66A;
+}
+#p3-3{
+	background-color:#11FF33;
+}
+#p3-4{
+	background-color:#FF5544;
+}
+.project{
+    display:block;
+    float:none;
+    clear:both;
+}
+​div{
+	margin:0;
+	padding:0;
+}
+.inner{
+	padding:20px;
+}
+#choco-menu{
+	position:absolute;
+	top:0;
+	overflow:auto;
+	z-index:1000;
+	top:20px;
+}
+.choco-link{
+	width:10px;
+	height:10px;
+	margin-left:10px;
+	border:1px solid #333;
+	display:block;
+	float:left;
+	background-color:#bababa;
+}
+.choco-row{
+	overflow:auto;
+	margin-top:10px;
+}
+.choco-link.active{
+	background-color:blue;
+}
