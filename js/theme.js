@@ -127,7 +127,15 @@ $(document).keydown(function(e) {
             break;
     }
 
-});
+});//End doc ready
+
+function moveBox(toT, toL) {
+    $('#container').animate({
+        'top' : -1 * toT,
+        'left' : -1 * toL
+    }, 1000);
+}
+
 //RESIZE
 /////////////////////////////////////////////////////////////
 $(window).resize(function() {
@@ -149,6 +157,8 @@ function resizeBoxes(w, h) {
     });
 }
 
+//CHOCO-NAV
+/////////////////////////////////////////////////////////////
 function setActiveBox(elem) {
     var id = elem.attr('id');
     var tProj = id.substr(1, 1);
@@ -156,7 +166,6 @@ function setActiveBox(elem) {
     $('.choco-link').removeClass('active');
     $($('#choco'+tProj).find('.choco-link')[tSlide - 1]).addClass('active');
 }
-
 function createChoco() {
     var i = 0;
     var choco = $('#choco-menu');
@@ -172,9 +181,3 @@ function createChoco() {
     })
 }
 
-function moveBox(toT, toL) {
-    $('#container').animate({
-        'top' : -1 * toT,
-        'left' : -1 * toL
-    }, 1000);
-}
