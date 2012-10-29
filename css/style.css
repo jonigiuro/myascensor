@@ -31,13 +31,13 @@ body, html{
 	overflow:auto;
 }
 #window{
-	height:300px;
-	width:300px;
-	border:1px solid #000;
+	width:1px;
+	height:1px;
 	position:relative;
 	overflow:hidden;
 }
 #container{
+	visibility:hidden;
 	width:100000px;
 	position:relative;
 	-webkit-transition: all 1000ms ease;
@@ -46,6 +46,7 @@ body, html{
     -o-transition: all 1000ms ease;
 	transition: all 1000ms ease;
 }
+
 .slide{
     width:300px;
     height:300px;
@@ -86,4 +87,26 @@ body, html{
 }
 .choco-link.active{
 	background-color:blue;
+}
+#loader-cont{
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+	position:absolute;
+	top:0;
+	left:0;
+	background: rgba(0,0,0,.8);
+	z-index:10000;
+
+}
+.loader-inner{
+	padding-top:200px;
+	width:80%;
+	color:auto;
+	margin:0 auto;
+	text-align:center;
+	color:#fff;
+}
+.loader-inner .title{
+	margin-bottom:20px;
 }

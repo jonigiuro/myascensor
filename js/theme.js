@@ -12,12 +12,12 @@ moveBox(cur);
 setActiveBox(cur);
 
 $(document).ready(function() {
-
+    
     var idParam = window.location.hash;
 
     //SET DIVS COLOR, ONLY TESTING PURPOSES
     $('.slide').each(function(){
-        $(this).css('background-color', get_random_color());
+       // $(this).css('background-color', get_random_color());
     });
     //END OF COLORS
 
