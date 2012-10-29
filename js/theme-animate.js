@@ -2,7 +2,6 @@ cur = $('#p1 .slide').first();
 curP = $('#p1');
 w = $(document).width();
 h = $(document).height();
-var startX = 0;
 resizeBoxes(w, h);
 
 $(document).ready(function() {
@@ -141,65 +140,12 @@ $(document).keydown(function(e) {
 function moveBox(curElem) {
     slTop = cur.position().top;
     slLeft = cur.position().left;
-    $('#container').css({
+    $('#container').animate({
         'top' : -1 * slTop,
         'left' : -1 * slLeft
-    });
+    }, 1000);
     setUrlVars(curElem);
 }
-//HANDLE SWIPES
-jQuery(document).bind('swipeleft',function(){
-    if (cur.next().length == 0) {
-        curP = cur.parent().next()
-        if (curP.length == 0) {
-            curP = $('#p1');
-            cur = $('#p1 .slide').first();
-        }
-        cur = curP.find('.slide').first();
-
-    } else {
-        cur = cur.next();
-    }
-    moveBox(cur);
-    setActiveBox(cur);
-});
-
-jQuery(document).bind('swiperight',function(){
-    if (cur.prev().length == 0) {
-        curP = cur.parent().prev()
-        if (curP.length == 0) {
-            curP = $('.project').last();
-            cur = curP.find('.slide').last();
-        }
-        cur = curP.find('.slide').last();
-
-    } else {
-        cur = cur.prev();
-    }
-    moveBox(cur);
-    setActiveBox(cur);
-});
-
-jQuery(document).bind('swipeup',function(){
-    curP = curP.next();
-    if (curP.length == 0) {
-        curP = $('.project').first();
-    }
-    cur = curP.find('.slide').first();
-    moveBox(cur);
-    setActiveBox(cur);
-});
-
-jQuery(document).bind('swipedown',function(){
-    curP = curP.prev();
-    if (curP.length == 0) {
-        curP = $('.project').last();
-    }
-    cur = curP.find('.slide').first();
-    moveBox(cur);
-    setActiveBox(cur);
-});
-
 
 //RESIZE
 /////////////////////////////////////////////////////////////

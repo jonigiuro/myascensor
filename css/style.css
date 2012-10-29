@@ -38,43 +38,20 @@ body, html{
 	overflow:hidden;
 }
 #container{
-	width:10000px;
+	width:100000px;
 	position:relative;
-  
+	-webkit-transition: all 1000ms ease;
+	-moz-transition: all 1000ms ease;
+    -ms-transition: all 1000ms ease;
+    -o-transition: all 1000ms ease;
+	transition: all 1000ms ease;
 }
 .slide{
     width:300px;
     height:300px;
     float:left;
 }
-#p1-1{
-    background-color:#bada55;
-}
-#p1-2{
 
-    background-color:red;
-}
-#p2-1{
-    background-color:orange;
-}
-#p2-2{
-    background-color:green;
-}
-#p2-3{
-    background-color:#e1e1e1;
-}
-#p3-1{
-	background-color:#FFBB55;
-}
-#p3-2{
-	background-color:#BAD66A;
-}
-#p3-3{
-	background-color:#11FF33;
-}
-#p3-4{
-	background-color:#FF5544;
-}
 .project{
     display:block;
     float:none;
