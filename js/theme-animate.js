@@ -1,8 +1,15 @@
-cur = $('#p1 .slide').first();
-curP = $('#p1');
+//STARTING SLIDE
+cur = $('#p1-1');
+curP = cur.parent();
+
 w = $(document).width();
 h = $(document).height();
+var startX = 0;
+
+//move to startslide
 resizeBoxes(w, h);
+moveBox(cur);
+setActiveBox(cur);
 
 $(document).ready(function() {
 
