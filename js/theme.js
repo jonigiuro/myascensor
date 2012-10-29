@@ -237,7 +237,7 @@ function setActiveBox(elem) {
 
     var tProj = parseInt(id.substr(1, lineIndex - 1));
     var tSlide = parseInt(id.substr(lineIndex + 1, 100));
-    console.log(lineIndex, tProj, tSlide)
+    //console.log(lineIndex, tProj, tSlide)
     $('.choco-link').removeClass('active');
     $($('#choco'+tProj).find('.choco-link')[tSlide - 1]).addClass('active');
     
