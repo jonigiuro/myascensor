@@ -25,10 +25,22 @@ body, html{
 	font-family:'Helvetica','Arial','sans-serif';
 	overflow:hidden;
 }
+@font-face {
+	font-family: 'Lobster';
+	src: url('fonts/Lobster.otf');
+}
+body{
+	background-image:url('../img/backgorund.jpg');
+}
 #navigation{
-	position:fixed;
-	bottom:0;
 	overflow:auto;
+}
+#navigation a{
+	color:#fff;
+	text-decoration:none;
+}
+#navigation a:hover{
+	text-decoration: underline;
 }
 #window{
 	width:1px;
@@ -51,8 +63,14 @@ body, html{
     width:300px;
     height:300px;
     float:left;
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
-
+.slide .inner{
+	padding:20px;
+}
 .project{
     display:block;
     float:none;
@@ -67,15 +85,17 @@ body, html{
 }
 #choco-menu{
 	position:absolute;
-	top:0;
 	overflow:auto;
 	z-index:1000;
-	top:20px;
+	bottom:20px;
+	left:20px;
+	background: rgba(0,0,0,.5);
+	padding:10px;
 }
 .choco-link{
 	width:10px;
 	height:10px;
-	margin-left:10px;
+	margin-right:10px;
 	border:1px solid #333;
 	display:block;
 	float:left;
@@ -109,4 +129,19 @@ body, html{
 }
 .loader-inner .title{
 	margin-bottom:20px;
+}
+.title{
+	font-family: 'Lobster', 'Helvetica Neue', 'Arial', 'Sans-serif';
+	color:#fff;
+	font-size:50px;
+}
+.text{
+	margin-top:30px;
+	color:#fff;
+	text-shadow:0 -1px 0px #333;
+	background: rgba(0,0,0,.5);
+	padding:20px;
+}
+.number{
+	display:block;
 }

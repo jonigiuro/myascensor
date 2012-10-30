@@ -1,23 +1,22 @@
 //STARTING SLIDE
-cur = $('#p1-1');
-curP = cur.parent();
+
+var startSlide = '#1-1';
 
 w = $(document).width();
 h = $(document).height();
+
 var startX = 0;
 
-//move to startslide
 resizeBoxes(w, h);
-moveBox(cur);
-setActiveBox(cur);
+
 
 $(document).ready(function() {
-
-    var idParam = window.location.hash;
+    
+    var idParam = (window.location.hash || startSlide);
 
     //SET DIVS COLOR, ONLY TESTING PURPOSES
     $('.slide').each(function(){
-        $(this).css('background-color', get_random_color());
+       // $(this).css('background-color', get_random_color());
     });
     //END OF COLORS
 
@@ -45,6 +44,8 @@ $(document).ready(function() {
     if(idParam){
         idParam = idParam.substr(1,100);
         cur = $('#p' + idParam);
+        curP = cur.parent();
+        //move to startslide
         moveBox(cur);
         setActiveBox(cur);
     }
