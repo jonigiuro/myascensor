@@ -12,159 +12,266 @@
 
 	<body>
 		<a href="https://github.com/jonigiuro"><img style="position: fixed; z-index:2; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-	<div id="choco-menu">
-		<div id="navigation">
-			<a id="prev" href="#">&laquo; Previous slide</a> | <a id="next" href="#">Next slide &raquo;</a>
-			<br />
-			<a id="prevproj" href="#">&laquo;&laquo;Previous Project</a> | <a id="nextproj" href="#">Next Project &raquo;&raquo;</a>
-			<br />
-			<a href="p1" class="proj-jump">Jump to Project1</a>
-			<br />
-			<a href="p2" class="proj-jump">Jump to Project2</a>
-			<br />
-			<a href="p3" class="proj-jump">Jump to Project3</a>
-			<br />
-			<a href="#" id="link-to-3-3">Jump  to Project3 Slide3</a>
-		</div>
-	</div>
-	<div id="loader-cont">
-		<div class="loader-inner">
-			<h2 class="title">Loading...<span class="number">0</span></h2>
-			<img src="img/ajax-loader.gif" alt="loader" />
-		</div>
-	</div>
+		<div id="loader-cont">
+			<div class="loader-inner">
+				<h2 class="title">Loading...<span class="number">0</span></h2>
+			</div>
+			<div id="load-bar">
 
-	<div id="window">
-	    <div id="container">
-	         <div class="project" id="p1">
-	             <div class="slide" id="p1-1">
-	             	<div class="inner">
-		                 <h1 class="title">
-							My own elevator
-						</h1>
-						<p class="text">
-							A simple website navigation inspired by <a href="http://kirkas.ch/ascensor/#/Home">Kirkas</a><br />
-							It supports key navigation, and works smoothly on handheld devices such as iPads or Iphones (swipe left/right to change slide or swipe up/down to change project)<br />
-							It's supposed to work as an image gallery for portfolios so it has a neat preloader to let the user know how much he has left to wait.<br />
-							Other features include direct linking to a specific slide, full responsiveness, dynamic choco-navigation menu creation(look at the bottom).<br />
-							It uses css3 transitions if the browsers supports them, otherwise it will fall back to jQuery animation, this means it will work ie7+, chrome, firefox and any other browser.
-						</p>
-					</div>
-	             </div>
-	             <div class="slide" id="p1-2">
-	                 <div class="inner">
-	                 	<h1 class="title">
-							Project-1 slide-2
-						</h1>
-	                 </div>
-	             </div>
-	        </div>
-	        <div class="project" id="p2">
-	             <div class="slide" id="p2-1">
-	                 <div class="inner">
-	                 	<h1 class="title">
-							Project-2 slide-1
-						</h1>
-	                 </div>
-	             </div>
-	             <div class="slide" id="p2-2">
-	                 <div class="inner">
-	                 	<h1 class="title">
-							Project-2 slide-2
-						</h1>
-	                 </div>
-	             </div>
-	            <div class="slide" id="p2-3">
-	                 <div class="inner">
-	                 	<h1 class="title">
-							Project-2 slide-3
-						</h1>
-	                 </div>
-	             </div>
-	        </div>
-	        <div class="project" id="p3">
-	             <div class="slide" id="p3-1">
-	                 <div class="inner">
-	                 	<h1 class="title">
-							Project-3 slide-1
-						</h1>
-	                 </div>
-	             </div>
-	             <div class="slide" id="p3-2">
-	                 <div class="inner">
-	                 	<h1 class="title">
-							Project-3 slide-2
-						</h1>
-	                 </div>
-	             </div>
-	            <div class="slide" id="p3-3">
-	                 <div class="inner">
-	                 	<h1 class="title">
-							Project-3 slide-3
-						</h1>
-	                 </div>
-	             </div>
-	             <div class="slide" id="p3-4">
-	                 <div class="inner">
-	                 	<h1 class="title">
-							Project-3 slide-4
-						</h1>
-	                 </div>
-	             </div>
-	             <div class="slide" id="p3-5">
-	                 <div class="inner">
-	                 	<h1 class="title">
-							Project-3 slide-5
-						</h1>
-	                 </div>
-	             </div>
-	             <div class="slide" id="p3-6">
-	                 <div class="inner">
-	                 	<h1 class="title">
-							Project-3 slide-6
-						</h1>
-	                 </div>
-	             </div>
-	             <div class="slide" id="p3-7">
-	                 <div class="inner">
-	                 	<h1 class="title">
-							Project-3 slide-7
-						</h1>
-	                 </div>
-	             </div>
-	             <div class="slide" id="p3-8">
-	                 <div class="inner">
-	                 	<h1 class="title">
-							Project-3 slide-8
-						</h1>
-	                 </div>
-	             </div>
-	             <div class="slide" id="p3-9">
-	                 <div class="inner">
-	                 	<h1 class="title">
-							Project-3 slide-9
-						</h1>
-	                 </div>
-	             </div>
-	             <div class="slide" id="p3-10">
-	                 <div class="inner">
-	                 	<h1 class="title">
-							Project-3 slide-10
-						</h1>
-	                 </div>
-	             </div>
-	        </div>
-	    </div>
-	</div>
+			</div>
+		</div>
+		<div id="choco-menu">
+			<div id="navigation">
+				<a id="prev" href="#">&laquo; Previous slide</a> | <a id="next" href="#">Next slide &raquo;</a>
+				<br />
+				<a id="prevproj" href="#">&laquo;&laquo;Previous Project</a> | <a id="nextproj" href="#">Next Project &raquo;&raquo;</a>
+				<br />
+				<a href="p1" class="proj-jump">Jump to Project1</a>
+				<br />
+				<a href="p2" class="proj-jump">Jump to Project2</a>
+				<br />
+				<a href="p3" class="proj-jump">Jump to Project3</a>
+				<br />
+				<a href="#" id="link-to-3-3">Jump  to Project3 Slide3</a>
+			</div>
+		</div>
 
-	
-<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
-	<script src="js/jquery172.js"></script>
-	<script src="js/jquerymobile.js"></script>
-	<script src="js/customswipe.js"></script>
-	<script src="js/modernizr.js"></script>
-	<script src="js/modernizr-test.js"></script>
-	<script src="js/loader.js"></script>
+		<div id="window">
+		    <div id="container">
+		         <div class="project" id="p1">
+		             <div class="slide" id="p1-1">
+		             	<div class="inner">
+			                 <h1 class="title">
+								My own elevator
+							</h1>
+							<p class="text">
+								A simple website navigation inspired by <a href="http://kirkas.ch/ascensor/#/Home">Kirkas</a><br />
+								It supports key navigation, and works smoothly on handheld devices such as iPads or Iphones (swipe left/right to change slide or swipe up/down to change project)<br />
+								It's supposed to work as an image gallery for portfolios so it has a neat preloader to let the user know how much he has left to wait.<br />
+								Other features include direct linking to a specific slide, full responsiveness, dynamic choco-navigation menu creation(look at the bottom).<br />
+								It uses css3 transitions if the browsers supports them, otherwise it will fall back to jQuery animation, this means it will work ie7+, chrome, firefox and any other browser.
+							</p>
+						</div>
+		             </div>
+		             <div class="slide" id="p1-2">
+		                 <div class="inner">
+		                 	<h1 class="title">
+								Project-1 slide-2
+							</h1>
+		                 </div>
+		             </div>
+		        </div>
+		        <div class="project" id="p2">
+		             <div class="slide" id="p2-1">
+		                 <div class="inner">
+		                 	<h1 class="title">
+								Project-2 slide-1
+							</h1>
+		                 </div>
+		             </div>
+		             <div class="slide" id="p2-2">
+		                 <div class="inner">
+		                 	<h1 class="title">
+								Project-2 slide-2<br />
+								This slide has no backgroun image.
+							</h1>
+		                 </div>
+		             </div>
+		            <div class="slide" id="p2-3">
+		                 <div class="inner">
+		                 	<h1 class="title">
+								Project-2 slide-3
+							</h1>
+		                 </div>
+		             </div>
+		        </div>
+		        <div class="project" id="p3">
+		             <div class="slide" id="p3-1">
+		                 <div class="inner">
+		                 	<h1 class="title">
+								Project-3 slide-1
+							</h1>
+		                 </div>
+		             </div>
+		             <div class="slide" id="p3-2">
+		                 <div class="inner">
+		                 	<h1 class="title">
+								Project-3 slide-2
+							</h1>
+		                 </div>
+		             </div>
+		            <div class="slide" id="p3-3">
+		                 <div class="inner">
+		                 	<h1 class="title">
+								Project-3 slide-3
+							</h1>
+		                 </div>
+		             </div>
+		             <div class="slide" id="p3-4">
+		                 <div class="inner">
+		                 	<h1 class="title">
+								Project-3 slide-4
+							</h1>
+		                 </div>
+		             </div>
+		             <div class="slide" id="p3-5">
+		                 <div class="inner">
+		                 	<h1 class="title">
+								Project-3 slide-5
+							</h1>
+		                 </div>
+		             </div>
+		             <div class="slide" id="p3-6">
+		                 <div class="inner">
+		                 	<h1 class="title">
+								Project-3 slide-6
+							</h1>
+		                 </div>
+		             </div>
+		             <div class="slide" id="p3-7">
+		                 <div class="inner">
+		                 	<h1 class="title">
+								Project-3 slide-7
+							</h1>
+		                 </div>
+		             </div>
+		             <div class="slide" id="p3-8">
+		                 <div class="inner">
+		                 	<h1 class="title">
+								Project-3 slide-8
+							</h1>
+		                 </div>
+		             </div>
+		             <div class="slide" id="p3-9">
+		                 <div class="inner">
+		                 	<h1 class="title">
+								Project-3 slide-9
+							</h1>
+		                 </div>
+		             </div>
+		             <div class="slide" id="p3-10">
+		                 <div class="inner">
+		                 	<h1 class="title">
+								Project-3 slide-10
+							</h1>
+		                 </div>
+		             </div>
+		        </div>
+		        <div class="project" id="p4">
+		            <div class="slide" id="p4-1">
+		                <div class="inner">
+		                 	<h1 class="title">
+								Project-4 slide-1
+							</h1>
+		                </div>
+		             </div>
+		        </div>
+		        <div class="project" id="p5">
+		            <div class="slide" id="p5-1">
+		                <div class="inner">
+		                 	<h1 class="title">
+								Project-5 slide-1
+							</h1>
+		                </div>
+		             </div>
+		             <div class="slide" id="p5-2">
+		                <div class="inner">
+		                 	<h1 class="title">
+								Project-5 slide-2
+							</h1>
+		                </div>
+		             </div>
+		             <div class="slide" id="p5-3">
+		                <div class="inner">
+		                 	<h1 class="title">
+								Project-5 slide-3
+							</h1>
+		                </div>
+		             </div>
+		             <div class="slide" id="p5-4">
+		                <div class="inner">
+		                 	<h1 class="title">
+								Project-5 slide-4
+							</h1>
+		                </div>
+		             </div>
+		             <div class="slide" id="p5-5">
+		                <div class="inner">
+		                 	<h1 class="title">
+								Project-5 slide-5
+							</h1>
+		                </div>
+		             </div>
+		             <div class="slide" id="p5-6">
+		                <div class="inner">
+		                 	<h1 class="title">
+								Project-5 slide-6
+							</h1>
+		                </div>
+		             </div>
+		             <div class="slide" id="p5-7">
+		                <div class="inner">
+		                 	<h1 class="title">
+								Project-5 slide-7
+							</h1>
+		                </div>
+		             </div>
+		             <div class="slide" id="p5-8">
+		                <div class="inner">
+		                 	<h1 class="title">
+								Project-5 slide-8
+							</h1>
+		                </div>
+		             </div>
+		             <div class="slide" id="p5-9">
+		                <div class="inner">
+		                 	<h1 class="title">
+								Project-5 slide-9
+							</h1>
+		                </div>
+		             </div>
+		             <div class="slide" id="p5-10">
+		                <div class="inner">
+		                 	<h1 class="title">
+								Project-5 slide-10
+							</h1>
+		                </div>
+		             </div>
+		             <div class="slide" id="p5-11">
+		                <div class="inner">
+		                 	<h1 class="title">
+								Project-5 slide-11
+							</h1>
+		                </div>
+		             </div>
+		        </div>
+		        <div class="project" id="p6">
+		            <div class="slide" id="p6-1">
+		                <div class="inner">
+		                 	<h1 class="title">
+								Project-6 slide-1
+							</h1>
+		                </div>
+		             </div>
+		             <div class="slide" id="p6-2">
+		                <div class="inner">
+		                 	<h1 class="title">
+								Project-6 slide-2
+							</h1>
+		                </div>
+		             </div>
+		        </div>
+		    </div>
+		</div>
+
+		
+	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
+		<script src="js/jquery172.js"></script>
+		<script src="js/jquerymobile.js"></script>
+		<script src="js/customswipe.js"></script>
+		<script src="js/modernizr.js"></script>
+		<script src="js/modernizr-test.js"></script>
+		<script src="js/loader.js"></script>
 
 	</body>
 
