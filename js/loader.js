@@ -30,8 +30,16 @@ var bgImages = {
                 '#p6-2':'img/b14.jpg'
 }
 
+Object.keys = Object.keys || function(o) {
+    var result = [];
+    for(var name in o) {
+        if (o.hasOwnProperty(name))
+          result.push(name);
+    }
+    return result;
+};
 //nImages = $('.slide').length;
-nImages = Object.keys(bgImages).length
+nImages = Object.keys(bgImages).length;
 loadedImgs = 0;
 /* OLD LOOP
 $('.project').each(function(i){
