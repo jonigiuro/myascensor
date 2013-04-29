@@ -161,3 +161,7 @@ body{
     -o-transition: width 250ms linear;
 	transition: width 250ms linear;
 }
+
+#p1-1 {
+	background-color: beige;
+}

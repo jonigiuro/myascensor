@@ -38,56 +38,39 @@ Object.keys = Object.keys || function(o) {
     }
     return result;
 };
-//nImages = $('.slide').length;
+
 nImages = Object.keys(bgImages).length;
 loadedImgs = 0;
-/* OLD LOOP
-$('.project').each(function(i){
-    i = i + 1;
-    var curP = $(this);
 
-    curP.find('.slide').each(function(q){
-        q = q + 1;
-        curS = $(this);
-        var curSlideIndex = '#p' + i + '-' + q;
-        var curSlide = $(curSlideIndex);
-        var img = new Image();
-
-        $(img).load(function(){
-            curSlide.css('backgroundImage', 'url(' + img.src + ')');
-            loadedImgs++;
-            if(nImages == loadedImgs){
-                $('#container').css('visibility','visible');
-                $('#loader-cont').fadeOut(1000);
-            }
-            $('.loader-inner .title .number').text( Math.round((loadedImgs / nImages) * 100) + '%');
-        })
-        img.src = bgImages[curSlideIndex];
-        console.log(img.src, curSlide)
-    })
-})*/
+var loadImages = false; //SET TO TRUE IF YOU WANT TO PRELOAD ALL THE BACKGROUND IMAGES
 
 //NEW LOOP
-for(var key in bgImages){
-    if(bgImages.hasOwnProperty(key)){
-        var curSlide = $(key);
-        var img = new Image();
-        var bgImg = bgImages[key];
-        curSlide.css('backgroundImage', 'url(' + bgImg + ')');
+if(loadImages) {
+    for(var key in bgImages){
+        if(bgImages.hasOwnProperty(key)){
+            var curSlide = $(key);
+            var img = new Image();
+            var bgImg = bgImages[key];
+            curSlide.css('backgroundImage', 'url(' + bgImg + ')');
 
-        $(img).load(function(){
+            $(img).load(function(){
 
-            loadedImgs++;
+                loadedImgs++;
 
-            if(nImages == loadedImgs){
-                $('#container').css('visibility','visible');
-                $('#loader-cont').fadeOut(1000);
-                $('#choco-menu').css('display','block');
-            }
-            var percentage = Math.round((loadedImgs / nImages) * 100);
-            $('.loader-inner .title .number').text( percentage + '%');
-            $('#load-bar').css('width', percentage + '%');
-        })
-    img.src = bgImages[key];
-    }   
+                if(nImages == loadedImgs){
+                    $('#container').css('visibility','visible');
+                    $('#loader-cont').fadeOut(1000);
+                    $('#choco-menu').css('display','block');
+                }
+                var percentage = Math.round((loadedImgs / nImages) * 100);
+                $('.loader-inner .title .number').text( percentage + '%');
+                $('#load-bar').css('width', percentage + '%');
+            })
+        img.src = bgImages[key];
+        }   
+    }
+} else {
+    $('#container').css('visibility','visible');
+    $('#loader-cont').fadeOut(1000);
+    $('#choco-menu').css('display','block');
 }
