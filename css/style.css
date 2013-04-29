@@ -31,12 +31,14 @@ body, html{
 }
 body{
 	background-image:url('../img/backgorund.jpg');
+	font-weight: 200;
 }
 #navigation{
 	overflow:auto;
+	margin-bottom: 10px;
 }
 #navigation a{
-	color:#fff;
+	color: #444;
 	text-decoration:none;
 	font-size:12px;
 }
@@ -91,24 +93,24 @@ body{
 	z-index:1000;
 	bottom:20px;
 	left:20px;
-	background: rgba(0,0,0,.5);
+	background: white;
 	padding:10px;
 }
 .choco-link{
 	width:10px;
 	height:10px;
-	margin-right:10px;
-	border:1px solid #333;
+	margin-right:1px;
+	background:#999;
 	display:block;
 	float:left;
 	background-color:#bababa;
 }
 .choco-row{
 	overflow:auto;
-	margin-top:10px;
+	margin-top:1px;
 }
 .choco-link.active{
-	background-color:blue;
+	background-color: #BADA55;
 }
 #loader-cont{
 	width:100%;
@@ -134,14 +136,15 @@ body{
 }
 .title{
 	font-family: 'Lobster', 'Helvetica Neue', 'Arial', 'Sans-serif';
-	color:#fff;
-	font-size:50px;
+	color: #444;
+	font-size: 50px;
+	text-align: center;
 }
 .text{
+	font-weight: 200;
 	margin-top:30px;
-	color:#fff;
-	text-shadow:0 -1px 0px #333;
-	background: rgba(0,0,0,.5);
+	color: #444;
+	background: white;
 	padding:20px;
 }
 .number{
