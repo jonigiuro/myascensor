@@ -148,10 +148,17 @@ $(document).keydown(function(e) {
 function moveBox(curElem) {
     slTop = cur.position().top;
     slLeft = cur.position().left;
-    $('#container').css({
-        'top' : -1 * slTop,
-        'left' : -1 * slLeft
-    });
+    /*$('#container').css({
+        'marginTop' : -1 * slTop,
+        'marginLeft' : -1 * slLeft
+    });*/
+
+    var cont = document.getElementById("container");
+    var transform = 'translateX(' + -1 * slLeft + 'px) translateY(' + -1 * slTop + 'px) translateZ(0)';
+    cont.style.MozTransform = transform;
+    cont.style.WebkitTransform = transform;
+    cont.style.OTransform = transform;
+
     setUrlVars(curElem);
 }
 //HANDLE SWIPES
